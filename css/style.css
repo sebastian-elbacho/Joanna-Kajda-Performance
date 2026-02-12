@@ -27,7 +27,9 @@
 
 :root {
     --bg: #0B0B0B;
-    --text:#f1ad6d;
+    /* --text: #D4AF37; */
+    /* --text:#f1ad6d; */
+    --text: #FFD700;
     --accent: #FF7A00;
 }
 
@@ -58,6 +60,13 @@ html {
     transform: scale(1.02);
 
 }
+.navigation__list {
+
+
+
+
+}
+
 
 .hero__overlay {
     position: absolute;
@@ -94,4 +103,19 @@ html {
     margin: 1rem 0 0;
     font-size: clamp(1rem, 3.6vw, 1.2rem);
     color: rgba(234,234,234,0.9);
+}
+
+
+.section__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section__title::before,
+.section__title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--text);
 }
