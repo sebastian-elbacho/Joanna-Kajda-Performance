@@ -1,24 +1,3 @@
-
-
-/* COLOR and FONT TEST*/
-
-
-/* html {
-    background-color: #0B0B0B;
-    color: #f1ad6d;
-    color: #C9A24D;
-    color: #EAEAEA;
-    color: #9A9A9A;
-    font-family: "Cinzel", serif;
-    font-family: "Playfair", serif; 
-    font-family: "Cormorant", serif;
-     font-family: "Cormorant Garamond", serif;
-
-} */
-
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -26,9 +5,8 @@
 }
 
 :root {
-    --bg: #0B0B0B;
-    /* --text: #D4AF37; */
-    /* --text:#f1ad6d; */
+    --bg: #010001;
+   
     --text: #FFD700;
     --accent: #FF7A00;
 }
@@ -39,6 +17,7 @@ html {
     font-family: "Cinzel", serif;
 }
 
+/* HERO */
 .hero {
     position: relative;
     min-height: 85vh;
@@ -47,7 +26,6 @@ html {
     text-align: center;
     overflow: hidden;
     padding: 24px;
-
 }
 
 .hero__image {
@@ -58,15 +36,8 @@ html {
     object-fit: cover;
     filter: brightness(45%);
     transform: scale(1.02);
-
+    z-index: 0;
 }
-.navigation__list {
-
-
-
-
-}
-
 
 .hero__overlay {
     position: absolute;
@@ -76,8 +47,8 @@ html {
         rgba(0,0,0,0.15),
         rgba(0,0,0,0.75)
     );
+    z-index: 1;
 }
-
 
 .hero__content {
     position: relative;
@@ -89,22 +60,28 @@ html {
     color: var(--text);
     font-size: clamp(2rem, 7vh, 3.25rem);
     line-height: 1.05;
-    margin: 0;
-
 }
 
 .hero__subtitle {
     font-size: clamp(1.1rem, 4vh, 1.6rem);
-    margin: 0.5rem 0 0;
+    margin-top: -0.5rem;
+    /* margin-left:; */
     letter-spacing: 0.06em;
 }
 
 .hero__tagline {
-    margin: 1rem 0 0;
+    margin-top: 4rem;
     font-size: clamp(1rem, 3.6vw, 1.2rem);
     color: rgba(234,234,234,0.9);
 }
 
+/* SECTION TITLE WITH LINES */
+.section__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 24px 0 12px;
+}
 
 .section__title {
     display: flex;
@@ -112,10 +89,71 @@ html {
     gap: 1rem;
 }
 
-.section__title::before,
+/* LEWA LINIA */
+.section__title::before {
+    content: "";
+    flex: 1;
+    height: 2px;
+
+    /* pełny kolor przy tekście → zanika na zewnątrz */
+    background: linear-gradient(
+        to left,
+        var(--text),
+        transparent
+    );
+}
+
+/* PRAWA LINIA */
 .section__title::after {
     content: "";
     flex: 1;
-    height: 1px;
-    background: var(--text);
+    height: 2px;
+
+    /* pełny kolor przy tekście → zanika na zewnątrz */
+    background: linear-gradient(
+        to right,
+        var(--text),
+        transparent
+    );
+}
+
+
+
+
+
+/* SECTION IMAGE */
+.section__img {
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(45%);
+    transform: scale(1.02);
+    margin-top: 10px;
+    aspect-ratio: 12 / 9;     /* nowocześnie i stabilnie */
+    /* border-radius: 12px;       */
+}
+
+/* TEXT */
+.section__main-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.section__text {
+    text-align: center;
+    margin: 10px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+    /* color: rgba(234,234,234,0.9); */
+    color: var(--text);
+}
+
+
+
+/* FOOTER */
+
+.footer__copy--text {
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
