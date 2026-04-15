@@ -7,7 +7,7 @@
 :root {
     --bg: #010001;
    
-    --text: #FFD700;
+    --text: #c7b135;
     --accent: #FF7A00;
 }
 
@@ -17,7 +17,38 @@ html {
     font-family: "Cinzel", serif;
 }
 
-/* HERO */
+ NAWIGACJA
+
+.navigation__list {
+    display: flex;
+    justify-content: center;
+    gap: 1.8em;
+
+}
+
+.navigation a {
+    
+    position: relative;
+    text-decoration: none;
+    color: rgba(234,234,234,0.9);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.navigation__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation.is-open .navigation__list {
+    display: flex;
+
+}
+
+
+
+ HERO 
 .hero {
     position: relative;
     min-height: 85vh;
@@ -75,7 +106,7 @@ html {
     color: rgba(234,234,234,0.9);
 }
 
-/* SECTION TITLE WITH LINES */
+SECTION TITLE WITH LINES 
 .section__title {
     display: flex;
     align-items: center;
@@ -89,13 +120,13 @@ html {
     gap: 1rem;
 }
 
-/* LEWA LINIA */
+LEWA LINIA 
 .section__title::before {
     content: "";
     flex: 1;
     height: 2px;
 
-    /* pełny kolor przy tekście → zanika na zewnątrz */
+     pełny kolor przy tekście → zanika na zewnątrz 
     background: linear-gradient(
         to left,
         var(--text),
@@ -103,7 +134,7 @@ html {
     );
 }
 
-/* PRAWA LINIA */
+ PRAWA LINIA 
 .section__title::after {
     content: "";
     flex: 1;
@@ -121,7 +152,7 @@ html {
 
 
 
-/* SECTION IMAGE */
+SECTION IMAGE 
 .section__img {
     width: 100%;
     object-fit: cover;
@@ -132,7 +163,7 @@ html {
     /* border-radius: 12px;       */
 }
 
-/* TEXT */
+ TEXT 
 .section__main-text {
     display: flex;
     flex-direction: column;
@@ -149,11 +180,13 @@ html {
 
 
 
-/* FOOTER */
+FOOTER
 
 .footer__copy--text {
     background-color: var(--bg);
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} 
+
+  
