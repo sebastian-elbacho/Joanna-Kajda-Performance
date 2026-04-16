@@ -13,6 +13,7 @@
 
 html {
     background-color: var(--bg);
+    /* background-image: url(../assets/img/xresch-smoke-6998837.jpg); */
     color: var(--text);
     font-family: "Cinzel", serif;
 }
@@ -60,7 +61,7 @@ html {
 img {
     position: absolute;
     width: 100vw;
-    filter: brightness(58%);
+    filter: brightness(60%);
 
 
 }
@@ -74,8 +75,70 @@ img {
 
 .hero__subtitle {
     margin-left: 25%;
+    font-size: 3rem ;
 
 }
+
+
+/* SEKCJA ABOUT ME */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 5%;
+}
+
+.about__title { 
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+
+}
+
+/* LEWA LINIA */
+.about__title::before {
+    content: "";
+    flex: 1;
+    height: 2px;
+
+     /* pełny kolor przy tekście → zanika na zewnątrz  */
+    background: linear-gradient(
+        to left,
+        var(--text),
+        transparent
+    );
+}
+
+ /* PRAWA LINIA  */
+.about__title::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+
+     /* pełny kolor przy tekście → zanika na zewnątrz  */
+    background: linear-gradient(
+        to right,
+        var(--text),
+        transparent
+    );
+}
+
+
+.about__text{
+    /* margin-top: 5%; */
+    text-align: center;
+    letter-spacing: .4px;
+    
+}
+
+
+
+
+
 
 
 
@@ -123,22 +186,22 @@ img {
     color: rgba(234,234,234,0.9);
 } */
 
-/* SECTION TITLE WITH LINES 
-.section__title {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 24px 0 12px;
-} */
-
+/* SECTION TITLE WITH LINES */
 /* .section__title {
     display: flex;
     align-items: center;
     gap: 1rem;
-} */
+    margin: 24px 0 12px;
+} 
 
-/* LEWA LINIA 
-.section__title::before {
+.section__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}  */
+
+ /* LEWA LINIA  */
+/* .section__title::before {
     content: "";
     flex: 1;
     height: 2px;
@@ -195,6 +258,6 @@ FOOTER
     display: flex;
     align-items: center;
     justify-content: center;
-} 
+}  */
 
-   */
+   
