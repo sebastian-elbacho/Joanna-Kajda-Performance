@@ -55,27 +55,33 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     width: 100vw;
 }
 
 img {
     position: absolute;
     width: 100vw;
-    filter: brightness(60%);
+    filter: brightness(35%);
 
 
 }
 
 .hero__content {
     position: absolute;
-    margin-top: 35%;
+    margin-top: 40%;
+
     
+    
+}
+
+.hero_title {
     
 }
 
 .hero__subtitle {
     margin-left: 25%;
-    font-size: 3rem ;
+    font-size: 1rem ;
 
 }
 
