@@ -6,84 +6,89 @@
 
 :root {
     --bg: #010001;
-   
-    --text: #c7b135;
+    --text: #ebca0d;
     --accent: #FF7A00;
+    /* --text: red; */
 }
 
 html {
     background-color: var(--bg);
-    /* background-image: url(../assets/img/xresch-smoke-6998837.jpg); */
     color: var(--text);
     font-family: "Cinzel", serif;
 }
 
- /* NAWIGACJA
-
-.navigation__list {
-    display: flex;
-    justify-content: center;
-    gap: 1.8em;
-
-} */
-
-/* .navigation a {
-    
-    position: relative;
-    text-decoration: none;
-    color: rgba(234,234,234,0.9);
-    z-index: 2;
-    cursor: pointer;
-} */
-
-/* .navigation__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-} */
-
-/* .navigation.is-open .navigation__list {
-    display: flex;
-
-} */
-
-
-
- /* HERO  */
-.hero {
-    position: relative;
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     
-    width: 100vw;
+
 }
 
-img {
-    position: absolute;
-    width: 100vw;
-    filter: brightness(35%);
 
+/* HERO */
+
+.header__hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../assets/img/joanna_kajda_iluzjonistka.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+    
+    
+   
+}
+
+.header__hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.40);
+    z-index: 0;
 
 }
 
 .hero__content {
     position: absolute;
-    margin-top: 40%;
-
+    bottom: 15%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+    font-size: 1.2rem;
+    
     
     
 }
 
-.hero_title {
-    
-}
 
-.hero__subtitle {
-    margin-left: 25%;
-    font-size: 1rem ;
 
-}
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* SEKCJA ABOUT ME */
@@ -135,11 +140,14 @@ img {
 
 
 .about__text{
-    /* margin-top: 5%; */
+    margin: 2% 5%;
     text-align: center;
-    letter-spacing: .4px;
+    letter-spacing: .6px;
     
 }
+
+
+
 
 
 
