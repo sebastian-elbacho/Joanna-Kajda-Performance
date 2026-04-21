@@ -32,31 +32,32 @@ html {
 
 .header__hero {
     width: 100%;
-    height: 100vh;
+    height: 40%;
     position: relative;
-    background-image: url(../assets/img/joanna_kajda_iluzjonistka.jpg);
-    background-size: cover;
+    /* background-image: url(../assets/img/joanna_kajda_iluzjonistka.jpg);
+    background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     
+}
 
-    
-    
-   
+img {
+    width: 100%;
+    height: auto;
 }
 
 .header__hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.40);
+    background: rgba(0, 0, 0, 0.50);
     z-index: 0;
 
 }
 
 .hero__content {
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
@@ -64,14 +65,45 @@ html {
     z-index: 1;
     font-size: 1.2rem;
     
-    
-    
 }
 
 
 
+.links {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 100%;
+   gap: 0.6rem 1rem;
+}
 
 
+a {
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.links__btn {
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px solid var(--text);
+    border-radius: 50px;
+}
+
+.links__btn:nth-child(1),
+.links__btn:nth-child(2),
+.links__btn:nth-child(3) {
+    width: calc(33% - 1rem);
+}
+
+ 
+.links__btn:nth-child(4),
+.links__btn:nth-child(5) { width: calc(40% - 1rem); }
+
+.links__btn:nth-child(6) { width: 40%; }
 
 
 
