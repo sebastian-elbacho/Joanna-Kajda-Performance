@@ -67,6 +67,8 @@ img {
     
 }
 
+/* SEKCJA Z LINKAMI */
+
 
 
 .links {
@@ -76,6 +78,7 @@ img {
    justify-content: center;
    width: 100%;
    gap: 0.6rem 1rem;
+   margin-top: 10px;
 }
 
 
@@ -189,84 +192,71 @@ a {
 
 
 
-/* SECTION IMAGE 
-.section__img {
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 65%;
+}
+
+.footer__text {
+    letter-spacing: 1px;
+}
+
+
+/* galeria.html */
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+
+
+/* LEWA LINIA  */
+header {
+  width: 100%; 
+  height: 40%;
+  position: relative;
+  margin-top: 5%;
+}
+
+.header__text {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
-    object-fit: cover;
-    filter: brightness(45%);
-    transform: scale(1.02);
-    margin-top: 10px;
-    aspect-ratio: 12 / 9;      nowocześnie i stabilnie 
-     border-radius: 12px;       
-} */
+    max-width: 600px;
+}
 
-/* .hero__overlay {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-        circle at 50% 40%,
-        rgba(0,0,0,0.15),
-        rgba(0,0,0,0.75)
-    );
-    z-index: 1;
-} */
-
-
-
-/* .hero__title {
-    color: var(--text);
-    font-size: clamp(2rem, 7vh, 3.25rem);
-    line-height: 1.05;
-} */
-
-/* .hero__subtitle {
-    font-size: clamp(1.1rem, 4vh, 1.6rem);
-    margin-top: -0.5rem;
-    margin-left:; 
-    letter-spacing: 0.06em;
-} */
-
-/* .hero__tagline {
-    margin-top: 4rem;
-    font-size: clamp(1rem, 3.6vw, 1.2rem);
-    color: rgba(234,234,234,0.9);
-} */
-
-/* SECTION TITLE WITH LINES */
-/* .section__title {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 24px 0 12px;
-} 
-
-.section__title {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}  */
-
- /* LEWA LINIA  */
-/* .section__title::before {
-    content: "";
+.header__text::before {
+     content: "";
     flex: 1;
     height: 2px;
 
-     pełny kolor przy tekście → zanika na zewnątrz 
+     /* pełny kolor przy tekście → zanika na zewnątrz  */
     background: linear-gradient(
         to left,
         var(--text),
         transparent
     );
+
 }
 
- PRAWA LINIA 
-.section__title::after {
+/* Prawa lINIA */
+.header__text::after {
     content: "";
     flex: 1;
     height: 2px;
 
-     pełny kolor przy tekście → zanika na zewnątrz 
+     /* pełny kolor przy tekście → zanika na zewnątrz  */
     background: linear-gradient(
         to right,
         var(--text),
@@ -274,36 +264,3 @@ a {
     );
 }
 
-
-
-
-
-
-
- TEXT 
-.section__main-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.section__text {
-    text-align: center;
-    margin: 10px;
-    letter-spacing: 0.06em;
-    line-height: 1.7;
-     color: rgba(234,234,234,0.9); 
-    color: var(--text);
-}
-
-
-
-FOOTER
-
-.footer__copy--text {
-    background-color: var(--bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}  */
-
-   
