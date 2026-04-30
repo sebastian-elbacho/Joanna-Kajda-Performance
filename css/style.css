@@ -39,6 +39,7 @@ html {
     background-position: center;
     background-repeat: no-repeat; */
     
+    
 }
 
 img {
@@ -176,8 +177,9 @@ a {
 
 .about__text{
     margin: 2% 5%;
+    padding: 2%;
     text-align: center;
-    letter-spacing: .6px;
+    letter-spacing: .8px;
     
 }
 
@@ -198,12 +200,48 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 65%;
+    margin-top: 40%;
 }
 
 .footer__text {
     letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
 }
+
+.footer__text::before {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(
+        to left,
+        var(--text),
+        transparent
+    );
+
+
+
+
+}
+
+.footer__text::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+
+     /* pełny kolor przy tekście → zanika na zewnątrz  */
+    background: linear-gradient(
+        to right,
+        var(--text),
+        transparent
+    );
+}
+
+
+
 
 
 /* galeria.html */
