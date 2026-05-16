@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #010001;
+    --text: #ebca0d;
+    --accent: #FF7A00;
+    /* --text: red; */
+}
+
+html {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Cinzel", serif;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
+
+}
+
+
+/* HERO */
+
+.header__hero {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    /* background-image: url(../assets/img/joanna_kajda_iluzjonistka.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; */
+    
+    
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.header__hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.50);
+    z-index: 0;
+
+}
+
+.hero__content {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+    font-size: 1.2rem;
+    
+}
+
+/* SEKCJA Z LINKAMI */
+
+
+
+.links {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 100%;
+   gap: 0.6rem 1rem;
+   margin-top: 10px;
+}
+
+
+a {
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.links__btn {
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px solid var(--text);
+    border-radius: 50px;
+}
+
+.links__btn:nth-child(1),
+.links__btn:nth-child(2),
+.links__btn:nth-child(3) {
+    width: calc(33% - 1rem);
+}
+
+ 
+.links__btn:nth-child(4),
+.links__btn:nth-child(5) { width: calc(40% - 1rem); }
+
+.links__btn:nth-child(6) { width: 40%; }
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SEKCJA ABOUT ME */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 5%;
+}
+
+.about__title { 
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+
+}
+
+/* LEWA LINIA */
+.about__title::before {
+    content: "";
+    flex: 1;
+    height: 2px;
+
+     /* pełny kolor przy tekście → zanika na zewnątrz  */
+    background: linear-gradient(
+        to left,
+        var(--text),
+        transparent
+    );
+}
+
+ /* PRAWA LINIA  */
+.about__title::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+
+     /* pełny kolor przy tekście → zanika na zewnątrz  */
+    background: linear-gradient(
+        to right,
+        var(--text),
+        transparent
+    );
+}
+
+
+.about__text{
+    margin: 2% 5%;
+    padding: 2%;
+    text-align: center;
+    letter-spacing: .8px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40%;
+}
+
+.footer__text {
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.footer__text::before {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(
+        to left,
+        var(--text),
+        transparent
+    );
+
+
+
+
+}
+
+.footer__text::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+
+     /* pełny kolor przy tekście → zanika na zewnątrz  */
+    background: linear-gradient(
+        to right,
+        var(--text),
+        transparent
+    );
+}
+
+
+
+
+
+
+
+
