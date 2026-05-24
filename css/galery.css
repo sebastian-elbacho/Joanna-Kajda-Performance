@@ -106,11 +106,21 @@ header {
 
 /* Gallery */
 
-.gallery {
+/* .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 10px;
     padding: 10px;
+
+} */
+
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 
 }
 
